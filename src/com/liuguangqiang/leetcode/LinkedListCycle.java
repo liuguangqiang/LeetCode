@@ -3,6 +3,9 @@ package com.liuguangqiang.leetcode;
 import com.liuguangqiang.structure.linkedlist.LinkedList;
 import com.liuguangqiang.structure.linkedlist.ListNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * https://leetcode.com/problems/linked-list-cycle/
  * <p>
@@ -14,6 +17,14 @@ import com.liuguangqiang.structure.linkedlist.ListNode;
  */
 public class LinkedListCycle {
 
+    /**
+     * 双指针方法
+     * <p>
+     * 同时遍历该链表，一个走1步，一个走2步，如果最后2个指针相同，则表明该链表有环，否则很快就可以遍历完；
+     *
+     * @param head
+     * @return
+     */
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
             return false;
@@ -28,6 +39,19 @@ public class LinkedListCycle {
             fast = fast.next.next;
         }
         return true;
+    }
+
+    public boolean hasCycle2(ListNode head) {
+        if (head == null) return false;
+        List<ListNode> listNodes = new ArrayList<>();
+        while (head != null) {
+            if (listNodes.contains(head)) {
+                return true;
+            }
+            listNodes.add(head);
+            head = head.next;
+        }
+        return false;
     }
 
     public static void main(String[] args) {
