@@ -4,7 +4,9 @@ import com.liuguangqiang.structure.linkedlist.LinkedList;
 import com.liuguangqiang.structure.linkedlist.ListNode;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * https://leetcode.com/problems/linked-list-cycle/
@@ -49,6 +51,19 @@ public class LinkedListCycle {
                 return true;
             }
             listNodes.add(head);
+            head = head.next;
+        }
+        return false;
+    }
+
+    public boolean hasCycle3(ListNode head) {
+        Set<ListNode> nodesSeen = new HashSet<>();
+        while (head != null) {
+            if (nodesSeen.contains(head)) {
+                return true;
+            } else {
+                nodesSeen.add(head);
+            }
             head = head.next;
         }
         return false;
