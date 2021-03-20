@@ -15,7 +15,7 @@ public class ReverseLinkedList {
     /**
      * 使用递归
      * <p>
-     * 假设整个链表只有两个节点head和next， 那么要反转链表， 只需要把链表中的两个节点换一个位置就可以了;
+     * 假设整个链表只有两个节点head和next， 如果要反转链表， 只需要把链表中的两个节点换一个位置就可以了;
      *
      * @param head
      * @return
@@ -29,6 +29,18 @@ public class ReverseLinkedList {
         next.next = head;
         head.next = null;
         return newHead;
+    }
+
+    public static ListNode reverseList2(ListNode head) {
+        ListNode node = head;
+        ListNode pre = null;
+        while (node != null) {
+            ListNode next = node.next;
+            node.next = pre;
+            pre = node;
+            node = next;
+        }
+        return pre;
     }
 
     public static void main(String[] args) {
