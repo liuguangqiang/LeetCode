@@ -14,4 +14,19 @@ public class TreeNode {
     public TreeNode(int x) {
         val = x;
     }
+
+    public void print() {
+        print(this);
+    }
+
+    public void print(TreeNode treeNode) {
+        System.out.println(treeNode.val);
+        if (treeNode.left != null) {
+            print(treeNode.left);
+        }
+
+        if (treeNode.right != null) {
+            print(treeNode.right);
+        }
+    }
 }
