@@ -1,4 +1,4 @@
-package com.liuguangqiang.leetcode;
+package com.liuguangqiang.leetcode.n0001_TwoSum;
 
 import java.util.HashMap;
 
@@ -22,7 +22,7 @@ public class TwoSum {
      * 这个问题就是x+y=target，反过来可以理解为，x = target-y，所以只用证明target-y在数组中就可以了,
      * 因为只遍历了一遍，所以时间复杂度O(N)
      */
-    public static int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int x = target - nums[i];
@@ -39,7 +39,7 @@ public class TwoSum {
     public static void main(String[] args) {
         int[] nums = new int[]{2, 7, 11, 15};
         int target = 13;
-        int[] result = twoSum(nums, target);
+        int[] result = new TwoSum().twoSum(nums, target);
         System.out.println(result[0]);
         System.out.println(result[1]);
     }
