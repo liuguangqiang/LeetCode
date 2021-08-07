@@ -1,4 +1,4 @@
-package com.liuguangqiang.leetcode;
+package com.liuguangqiang.leetcode.n0704_BinarySearch;
 
 /**
  * https://leetcode.com/problems/binary-search/
