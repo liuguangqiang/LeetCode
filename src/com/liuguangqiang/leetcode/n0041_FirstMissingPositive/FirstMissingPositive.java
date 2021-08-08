@@ -1,4 +1,4 @@
-package com.liuguangqiang.leetcode;
+package com.liuguangqiang.leetcode.n0041_FirstMissingPositive;
 
 import java.util.HashSet;
 
