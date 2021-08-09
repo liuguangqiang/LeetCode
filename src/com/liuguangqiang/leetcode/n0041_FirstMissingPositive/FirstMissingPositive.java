@@ -19,7 +19,7 @@ import java.util.HashSet;
  */
 public class FirstMissingPositive {
 
-    public static int firstMissingPositive(int[] nums) {
+    public int firstMissingPositive(int[] nums) {
         HashSet<Integer> hashSet = new HashSet<>();
         for (int i : nums) {
             if (i > 0) {
@@ -38,6 +38,6 @@ public class FirstMissingPositive {
 
     public static void main(String[] args) {
         int[] nums = {3, 4, -1, 1};
-        System.out.println(firstMissingPositive(nums));
+        System.out.println(new FirstMissingPositive().firstMissingPositive(nums));
     }
 }
