@@ -1,4 +1,4 @@
-package com.liuguangqiang.leetcode;
+package com.liuguangqiang.leetcode.n0200_NumberOfIsland;
 
 /**
  * https://leetcode.com/problems/number-of-islands/description/
