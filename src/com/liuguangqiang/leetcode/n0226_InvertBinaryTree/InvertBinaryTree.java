@@ -1,4 +1,4 @@
-package com.liuguangqiang.leetcode;
+package com.liuguangqiang.leetcode.n0226_InvertBinaryTree;
 
 import com.liuguangqiang.structure.tree.TreeNode;
 
