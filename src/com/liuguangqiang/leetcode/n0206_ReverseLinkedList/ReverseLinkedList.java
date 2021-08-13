@@ -1,4 +1,4 @@
-package com.liuguangqiang.leetcode;
+package com.liuguangqiang.leetcode.n0206_ReverseLinkedList;
 
 import com.liuguangqiang.structure.linkedlist.LinkedList;
 import com.liuguangqiang.structure.linkedlist.ListNode;
