@@ -1,4 +1,4 @@
-package com.liuguangqiang.leetcode;
+package com.liuguangqiang.leetcode.n0205_IsomorphicStrings;
 
 import java.util.HashMap;
 
